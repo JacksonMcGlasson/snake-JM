@@ -66,8 +66,11 @@ function gameInitialize() {
     restartButton = document.getElementById("restartButton");
     restartButton.addEventListener("click", gameRestart);
     //go to start screen
-  //  menuButton = document.getElementById("menuButton");
-   // menuButton.addEventListener("click" , gameStart )
+    menuButton = document.getElementById("menuButton");
+    menuButton.addEventListener("click" , mainMenu );
+    
+    
+    
     //scoreboard
     playHUD = document.getElementById("playHUD");
     scoreboard = document.getElementById("scoreboard");
@@ -103,7 +106,10 @@ function gameRestart() {
     hideMenu(gameOverMenu);
     setState("PLAY");
 }
-
+function mainMenu() {
+    setState("START");
+    hideMenu(gameOverMenu);
+}
 /*-----------------------------------------------------------------------------
  * Snake Functions 
  * ----------------------------------------------------------------------------
