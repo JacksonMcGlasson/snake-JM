@@ -54,11 +54,11 @@ function gameInitialize() {
     // start button
      startButton.addEventListener("click", gameStart);
     // easy difficulty
-  // easyButton.addEventListener("click", gameStart , setInterval( gameLoop , 1000 / 15) );
+    easyButton.addEventListener("click", easyDifficulty );
     // medium difficulty
-  //  mediumButton.addEventListener("click", gameStart , setInterval(gameLoop , 1000 / 20) );
+    mediumButton.addEventListener("click", mediumDifficulty );
     //hard difficulty
-  //  hardButton.addEventListener("click", gameStart , setInterval(gameLoop , 1000 / 25) );
+    hardButton.addEventListener("click", gameStart , hardDifficulty);
     //game over menu
     gameOverMenu = document.getElementById("gameOver");
     centerMenuPosition(gameOverMenu);
@@ -110,6 +110,22 @@ function mainMenu() {
     setState("START");
     hideMenu(gameOverMenu);
 }
+
+function easyDifficulty() {
+    setInterval(gameLoop, 1000/10);
+    gameStart();
+}
+
+function mediumDifficulty() {
+    setInterval(gameLoop, 1000/18);
+    gameStart();
+}
+
+function hardDifficulty() {
+    setInterval(gameLoop, 1000/25);
+    gameStart();
+}
+
 /*-----------------------------------------------------------------------------
  * Snake Functions 
  * ----------------------------------------------------------------------------
