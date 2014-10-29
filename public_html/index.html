@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head> 
+        <title>Jackson McGlasson - Snake</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        
+        <!--start menu-->
+        <section id="startScreen">
+            <h1 class="title">Snake!</h1>
+            <h3 id="startButton">Start</h3>
+            <h3 id="easyButton">Easy</h3>
+            <h3 id ="mediumButton">Medium</h3>
+            <h3 id="hardButton">Hard</h3>
+        </section>
+        
+        <!--scoreboard-->
+        <section id="playHUD">
+            <h2 id="scoreboard"></h2>
+        </section>
+        
+        <!--game over menu-->
+        <section id="gameOver">
+            <h1 class="title">GAME OVER!</h1>
+            <h3 id="restartButton">Restart?</h3>
+            <h3 id="menuButton">Main Menu</h3>
+        </section>
+        
+        <!-- the actual screen of the snake game -->
+        <canvas id="game-screen"></canvas>
+        <!-- links index file to java script file -->
+        <script src="js/snake.js"></script>
+    </body>
+</html> 

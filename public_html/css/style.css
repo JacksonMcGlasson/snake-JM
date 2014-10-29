@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+} 
+
+#game-screen{
+    display: block;
+} 
+
+#gameOver, #playHUD, #startScreen {
+    position: absolute;
+    visibility: hidden
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: mediumspringgreen;
+    text-align: center;
+}
+
+.title {
+    font-size: 62px;
+    margin-bottom: 0px;
+    margin-top: 0px; 
+}
+
+#restartButton {
+    font-size: 30px;
+    border: 2px solid mediumspringgreen;
+    border-radius: 10px;
+}
+
+#restartButton:hover {
+    background-color: blue;
+}
+
+#menuButton {
+    font-size: 30px;
+    border: 2px solid mediumspringgreen;
+    border-radius: 10px;
+}
+
+#menuButton:hover {
+    background-color: blue;
+}
+
+#scoreboard {
+    margin: 0px;
+}
+
+#startButton {
+    font-size: 30px;
+    border: 2px solid mediumspringgreen;
+    border-radius: 10px;
+}
+
+#startButton:hover {
+    background-color: blue;
+}
+
+#easyButton , #mediumButton , #hardButton{
+    font-size: 30px;
+    border: 2px solid mediumspringgreen;
+    border-radius: 10px;
+}
+#easyButton:hover {
+    background-color: blue;
+}
+#mediumButton:hover {
+    background-color: blue;
+}
+#hardButton:hover {
+    background-color: blue;
+}
