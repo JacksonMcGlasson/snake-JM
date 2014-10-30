@@ -112,7 +112,7 @@ function mainMenu() {
 }
 
 function easyDifficulty() {
-    setInterval(gameLoop, 1000/10);
+    setInterval(gameLoop, 1000/15);
     gameStart();
 }
 
