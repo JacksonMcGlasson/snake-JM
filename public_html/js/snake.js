@@ -52,20 +52,20 @@ function gameInitialize() {
     canvas.height = screenHeight;
 
     document.addEventListener("keydown", keyboardHandler);
-    
+
     startScreen = document.getElementById("startScreen");
     centerMenuPosition(startScreen);
     // start button
-     startButton.addEventListener("click", gameStart);
+    startButton.addEventListener("click", gameStart);
     // easy difficulty
     easyButton = document.getElementById("easyButton");
-    easyButton.addEventListener("click", easyDifficulty );
+    easyButton.addEventListener("click", easyDifficulty);
     // medium difficulty
     mediumButton = document.getElementById("mediumButton");
-    mediumButton.addEventListener("click", mediumDifficulty );
+    mediumButton.addEventListener("click", mediumDifficulty);
     //hard difficulty
     hardButton = document.getElementById("hardButton");
-    hardButton.addEventListener("click", gameStart , hardDifficulty);
+    hardButton.addEventListener("click", gameStart, hardDifficulty);
     //game over menu
     gameOverMenu = document.getElementById("gameOver");
     centerMenuPosition(gameOverMenu);
@@ -74,10 +74,10 @@ function gameInitialize() {
     restartButton.addEventListener("click", gameRestart);
     //go to start screen
     menuButton = document.getElementById("menuButton");
-    menuButton.addEventListener("click" , mainMenu );
-    
-    
-    
+    menuButton.addEventListener("click", mainMenu);
+
+
+
     //scoreboard
     playHUD = document.getElementById("playHUD");
     scoreboard = document.getElementById("scoreboard");
@@ -117,34 +117,35 @@ function mainMenu() {
     setState("START");
     hideMenu(gameOverMenu);
 }
-
+//sets difficulty to easy
 function easyDifficulty() {
-    clearInterval(fast);
-    clearInterval(medium);
-   // clearInterval(easy);
+   // clearInterval(fast);
+   // clearInterval(medium);
+    clearInterval(slow);
     clearInterval(speed);
-  slow = setInterval(gameLoop, 80);
+    slow = setInterval(gameLoop, 80);
     gameStart();
-    
+    snakeUpdate();
 }
-
+//sets difficulty to medium
 function mediumDifficulty() {
-    clearInterval(fast);
-    clearInterval(medium);
-    clearInterval(easy);
-    clearInterval(speed);
-  medium = setInterval(gameLoop, 60);
-    gameStart();
-    
-}
-
-function hardDifficulty() {
    // clearInterval(fast);
     clearInterval(medium);
-    clearInterval(easy);
+   // clearInterval(slow);
     clearInterval(speed);
-   fast = setInterval(gameLoop, 35);
+    medium = setInterval(gameLoop, 60);
     gameStart();
+    snakeUpdate();
+}
+//sets snake difficuty to hard
+function hardDifficulty() {
+    clearInterval(fast);
+  //  clearInterval(medium);
+   // clearInterval(slow);
+    clearInterval(speed);
+    fast = setInterval(gameLoop, 40);
+    gameStart();
+    snakeUpdate();
 }
 
 /*-----------------------------------------------------------------------------
