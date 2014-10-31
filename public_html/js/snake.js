@@ -21,6 +21,10 @@ var restartButton;
 var menuButton;
 var playHUD;
 var scoreboard;
+var speed;
+var fast;
+var slow;
+var medium;
 
 /*-----------------------------------------------------------------------------
  * Executing Game Code
@@ -30,7 +34,7 @@ var scoreboard;
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval(gameLoop, 1000 / 15);
+speed = setInterval(gameLoop, 1000 / 15);
 
 /*-----------------------------------------------------------------------------
  * Game Functions
@@ -54,10 +58,13 @@ function gameInitialize() {
     // start button
      startButton.addEventListener("click", gameStart);
     // easy difficulty
+    easyButton = document.getElementById("easyButton");
     easyButton.addEventListener("click", easyDifficulty );
     // medium difficulty
+    mediumButton = document.getElementById("mediumButton");
     mediumButton.addEventListener("click", mediumDifficulty );
     //hard difficulty
+    hardButton = document.getElementById("hardButton");
     hardButton.addEventListener("click", gameStart , hardDifficulty);
     //game over menu
     gameOverMenu = document.getElementById("gameOver");
@@ -112,17 +119,31 @@ function mainMenu() {
 }
 
 function easyDifficulty() {
-    setInterval(gameLoop, 1000/15);
+    clearInterval(fast);
+    clearInterval(medium);
+   // clearInterval(easy);
+    clearInterval(speed);
+  slow = setInterval(gameLoop, 80);
     gameStart();
+    
 }
 
 function mediumDifficulty() {
-    setInterval(gameLoop, 1000/18);
+    clearInterval(fast);
+    clearInterval(medium);
+    clearInterval(easy);
+    clearInterval(speed);
+  medium = setInterval(gameLoop, 60);
     gameStart();
+    
 }
 
 function hardDifficulty() {
-    setInterval(gameLoop, 1000/25);
+   // clearInterval(fast);
+    clearInterval(medium);
+    clearInterval(easy);
+    clearInterval(speed);
+   fast = setInterval(gameLoop, 35);
     gameStart();
 }
 
