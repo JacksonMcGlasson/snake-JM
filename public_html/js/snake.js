@@ -129,9 +129,9 @@ function easyDifficulty() {
 }
 //sets difficulty to medium
 function mediumDifficulty() {
-   // clearInterval(fast);
+    // clearInterval(fast);
     clearInterval(medium);
-   // clearInterval(slow);
+    // clearInterval(slow);
     clearInterval(speed);
     medium = setInterval(gameLoop, 60);
     gameStart();
@@ -140,8 +140,8 @@ function mediumDifficulty() {
 //sets snake difficuty to hard
 function hardDifficulty() {
     clearInterval(fast);
-  //  clearInterval(medium);
-   // clearInterval(slow);
+    //  clearInterval(medium);
+    // clearInterval(slow);
     clearInterval(speed);
     fast = setInterval(gameLoop, 40);
     gameStart();
